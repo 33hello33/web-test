@@ -11,7 +11,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/", test)
 
-	err := router.Run("0.0.0.0:8080")
+	err := router.Run(":80")
 	if err != nil {
 		log.Fatal("can not start server " + err.Error())
 	}
